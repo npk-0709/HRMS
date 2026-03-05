@@ -26,9 +26,7 @@ public class Main {
             System.out.println("4. Reports");
             System.out.println("5. Exit");
             System.out.println("--------------------------------------");
-
             choice = Validator.readMenuChoice(sc, "Choose an option: ", 1, 5);
-
             switch (choice) {
                 case 1:
                     employeeManager.showMenu(sc);
@@ -43,7 +41,6 @@ public class Main {
                     reportManager.showMenu(sc);
                     break;
                 case 5:
-                    // Save all data before exit
                     employeeManager.saveToFile();
                     attendanceManager.saveToFile();
                     System.out.println("Data saved.");
